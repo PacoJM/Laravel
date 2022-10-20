@@ -20,7 +20,12 @@
 
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <h1>Photos</h1>
-            
+            <section class="photos">
+                <div v-for="photo in photos" :key="photo.id" class="card" >
+                    <img :src="photo.path" alt="">
+                </div>
+            </section>
+
         </div>
     </div>
 </template>
@@ -38,7 +43,7 @@
         props: {
             canLogin: Boolean,
             canRegister: Boolean,
-          
+            photos: Array
         }
     })
 </script>
