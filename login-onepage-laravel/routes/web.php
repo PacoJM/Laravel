@@ -24,6 +24,11 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('photos', function () {
+    //dd(Photo::all());
+    return Inertia::render('Guest/Photos');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
